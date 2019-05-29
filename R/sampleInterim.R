@@ -43,7 +43,7 @@
 #' @param nAdapt number of iterations per simulated trial used prior to choose the
 #' proposal distributions. See \code{?rjags::adapt} for details
 #' @param nBurn number of iterations discarded from each Markov chain as burn-in.
-#'
+#' @param no_cores number of cores used in \code{parallel::parLapply}
 #' @return a vector of simulated posterior probabilities
 #' \eqn{P(\delta >}\code{deltaThreshold}|data)
 #'
@@ -66,7 +66,8 @@ sampleInterim <- function(fitDelta,
                           nTrials = 100,
                           nIter = 1000,
                           nAdapt = 1000,
-                          nBurn = 0){
+                          nBurn = 0,
+                          no_cores = parallel::detectCores() - 1){
 
   deltaSample <- SHELF::sampleFit(fitDelta, n = nTrials)[, deltaDist]
   sigmaTmtSample <- 1 /

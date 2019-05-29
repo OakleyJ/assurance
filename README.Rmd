@@ -32,7 +32,7 @@ devtools::install_github("OakleyJ/SHELF")
 devtools::install_github("OakleyJ/assurance")
 ```
 
-## Example
+## Example 
 
 This code illustrates the example from Alhussein and Oakley (2019).
 

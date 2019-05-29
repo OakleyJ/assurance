@@ -9,7 +9,8 @@ sampleInterim(fitDelta, fitPrecisionTmt, precisionCtrl = "iid",
   nControl = 25, nTreatment = nControl, deltaDist = "normal",
   precisionTmtDist = "gamma", precisionCtrlDist = precisionTmtDist,
   deltaThreshold = 0, diagnostics = FALSE, nTrials = 100,
-  nIter = 1000, nAdapt = 1000, nBurn = 0)
+  nIter = 1000, nAdapt = 1000, nBurn = 0,
+  no_cores = parallel::detectCores() - 1)
 }
 \arguments{
 \item{fitDelta}{an object of class \code{elicitation}
@@ -66,6 +67,8 @@ for one example chain.}
 proposal distributions. See \code{?rjags::adapt} for details}
 
 \item{nBurn}{number of iterations discarded from each Markov chain as burn-in.}
+
+\item{no_cores}{number of cores used in \code{parallel::parLapply}}
 }
 \value{
 a vector of simulated posterior probabilities

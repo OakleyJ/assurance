@@ -30,31 +30,31 @@ devtools::install_github("OakleyJ/assurance")
 This code illustrates the example from Alhussein and Oakley (2019).
 
 We suppose the expert judges   
-![P(\\delta = 0)
-= 0.5](https://latex.codecogs.com/png.latex?P%28%5Cdelta%20%3D%200%29%20%3D%200.5
-"P(\\delta = 0) = 0.5")  
-, and conditional on ![\\delta
+![Pr(\\delta = 0)
+= 0.5,](https://latex.codecogs.com/png.latex?Pr%28%5Cdelta%20%3D%200%29%20%3D%200.5%2C
+"Pr(\\delta = 0) = 0.5,")  
+and conditional on ![\\delta
 \\neq 0](https://latex.codecogs.com/png.latex?%5Cdelta%20%5Cneq%200
 "\\delta \\neq 0"), the expert judges   
 ![
-P(\\delta \\le 0.25|\\delta \\neq 0) = 0.25,
-](https://latex.codecogs.com/png.latex?%0AP%28%5Cdelta%20%5Cle%200.25%7C%5Cdelta%20%5Cneq%200%29%20%3D%200.25%2C%0A
+Pr(\\delta \\le 0.25|\\delta \\neq 0) = 0.25,
+](https://latex.codecogs.com/png.latex?%0APr%28%5Cdelta%20%5Cle%200.25%7C%5Cdelta%20%5Cneq%200%29%20%3D%200.25%2C%0A
 "
-P(\\delta \\le 0.25|\\delta \\neq 0) = 0.25,
+Pr(\\delta \\le 0.25|\\delta \\neq 0) = 0.25,
 ")  
   
 ![
-P(\\delta \\le 0.4|\\delta \\neq 0) = 0.5, 
-](https://latex.codecogs.com/png.latex?%0AP%28%5Cdelta%20%5Cle%200.4%7C%5Cdelta%20%5Cneq%200%29%20%3D%200.5%2C%20%0A
+Pr(\\delta \\le 0.4|\\delta \\neq 0) = 0.5, 
+](https://latex.codecogs.com/png.latex?%0APr%28%5Cdelta%20%5Cle%200.4%7C%5Cdelta%20%5Cneq%200%29%20%3D%200.5%2C%20%0A
 "
-P(\\delta \\le 0.4|\\delta \\neq 0) = 0.5, 
+Pr(\\delta \\le 0.4|\\delta \\neq 0) = 0.5, 
 ")  
   
 ![
-P(\\delta \\le 0.55|\\delta \\neq 0) = 0.75. 
-](https://latex.codecogs.com/png.latex?%0AP%28%5Cdelta%20%5Cle%200.55%7C%5Cdelta%20%5Cneq%200%29%20%3D%200.75.%20%0A
+Pr(\\delta \\le 0.55|\\delta \\neq 0) = 0.75. 
+](https://latex.codecogs.com/png.latex?%0APr%28%5Cdelta%20%5Cle%200.55%7C%5Cdelta%20%5Cneq%200%29%20%3D%200.75.%20%0A
 "
-P(\\delta \\le 0.55|\\delta \\neq 0) = 0.75. 
+Pr(\\delta \\le 0.55|\\delta \\neq 0) = 0.75. 
 ")  
 
 We fit a distribution to these judgements with the command
@@ -89,7 +89,7 @@ assurance::assuranceNormal(fitDelta = myfitDelta,
                 pDeltaZero  = 0.5,
                 nTreatment = 20,
                 nControl = 20)
-#> [1] 0.3626
+#> [1] 0.3554
 ```
 
 Next, we consider the information that might result from observing 10
@@ -130,7 +130,7 @@ which this probability is either less than 0.05, or greater than 0.95:
 
 ``` r
 mean(pEffective < 0.05 | pEffective > 0.95)
-#> [1] 0.464
+#> [1] 0.482
 ```
 
 We display the predictive distribution of posterior probabilities with a
