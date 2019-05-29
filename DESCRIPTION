@@ -1,0 +1,27 @@
+Package: assurance
+Type: Package
+Title: Assurance for Clinical Trial Design 
+Version: 0.1.0
+Author: Jeremy E. Oakley
+Maintainer: Jeremy Oakley <j.oakley@sheffield.ac.uk>
+Description: Estimates assurance (probability of a successful outcome) of a randomised controlled trial with two arms and normally distributed data,given elicited prior distributions for the treatment effect and observation variances.
+License: GPL-3
+Encoding: UTF-8
+LazyData: true
+Suggests: 
+    knitr,
+    rmarkdown,
+    testthat
+VignetteBuilder: knitr
+Imports: 
+    SHELF,
+    parallel,
+    shiny,
+    ggplot2,
+    magrittr,
+    rjags,
+    tidyr,
+    coda,
+    stats,
+    graphics
+RoxygenNote: 6.1.1
