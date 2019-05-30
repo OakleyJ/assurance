@@ -15,12 +15,14 @@ knitr::opts_chunk$set(
   out.width = "100%"
 )
 ```
-# `assurance`
+# assurance
 
 <!-- badges: start -->
 <!-- badges: end -->
 
-An R package for implementing the assurance method for normally distributed data, with elicited distributions for the treatment effect, and the population variances in the treatment and control arms. 
+An R package for implementing the assurance method for normally distributed data, with elicited distributions for the treatment effect, and the population variances in the treatment and control arms. The package implements the methodology from 
+
+- Alhussain, Z. A. and Oakley, J. E. (2019). [Assurance for clinical trial design with normally distributed outcomes: eliciting uncertainty about variances](https://arxiv.org/abs/1702.00978v2). arXiv:1702.00978v2.
 
 ## Installation
 
@@ -108,7 +110,7 @@ We display the predictive distribution of posterior probabilities with a histogr
 hist(pEffective, breaks = seq(from = 0, 
                               to = 1, 
                               by = 0.05),
-     xlab = expression(P(delta>=0~"| trial data")),
+     xlab = expression(P(delta>0~"| trial data")),
      main ="")
 ```
 

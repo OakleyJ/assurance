@@ -3,7 +3,7 @@ README
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# `assurance`
+# assurance
 
 <!-- badges: start -->
 
@@ -11,7 +11,13 @@ README
 
 An R package for implementing the assurance method for normally
 distributed data, with elicited distributions for the treatment effect,
-and the population variances in the treatment and control arms.
+and the population variances in the treatment and control arms. The
+package implements the methodology from
+
+  - Alhussain, Z. A. and Oakley, J. E. (2019). [Assurance for clinical
+    trial design with normally distributed outcomes: eliciting
+    uncertainty about variances](https://arxiv.org/abs/1702.00978v2).
+    arXiv:1702.00978v2.
 
 ## Installation
 
@@ -89,7 +95,7 @@ assurance::assuranceNormal(fitDelta = myfitDelta,
                 pDeltaZero  = 0.5,
                 nTreatment = 20,
                 nControl = 20)
-#> [1] 0.3554
+#> [1] 0.357
 ```
 
 Next, we consider the information that might result from observing 10
@@ -130,7 +136,7 @@ which this probability is either less than 0.05, or greater than 0.95:
 
 ``` r
 mean(pEffective < 0.05 | pEffective > 0.95)
-#> [1] 0.482
+#> [1] 0.476
 ```
 
 We display the predictive distribution of posterior probabilities with a
@@ -140,7 +146,7 @@ histogram:
 hist(pEffective, breaks = seq(from = 0, 
                               to = 1, 
                               by = 0.05),
-     xlab = expression(P(delta>=0~"| trial data")),
+     xlab = expression(P(delta>0~"| trial data")),
      main ="")
 ```
 
