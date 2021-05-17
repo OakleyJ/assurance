@@ -4,11 +4,21 @@
 \alias{assuranceNormal}
 \title{Estimate the assurance for a two-arm trial with normally distributed data}
 \usage{
-assuranceNormal(fitDelta, fitPrecisionTmt, precisionCtrl = "iid",
-  fitPrecisionCtrl = NULL, sigmaSqCtrl = NULL, pDeltaZero = 0,
-  nControl = 25, nTreatment = nControl, deltaDist = "normal",
-  precisionTmtDist = "gamma", precisionCtrlDist = precisionTmtDist,
-  nRep = 10000, size = 0.05)
+assuranceNormal(
+  fitDelta,
+  fitPrecisionTmt,
+  precisionCtrl = "iid",
+  fitPrecisionCtrl = NULL,
+  sigmaSqCtrl = NULL,
+  pDeltaZero = 0,
+  nControl = 25,
+  nTreatment = nControl,
+  deltaDist = "normal",
+  precisionTmtDist = "gamma",
+  precisionCtrlDist = precisionTmtDist,
+  nRep = 10000,
+  size = 0.05
+)
 }
 \arguments{
 \item{fitDelta}{an object of class \code{elicitation}

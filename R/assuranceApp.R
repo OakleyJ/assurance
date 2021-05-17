@@ -19,7 +19,8 @@ ui <- fluidPage(
                              distributions are shifted to have support
                              (lower limit, Infinity), and the beta distribution is
                              scaled and shifted to have support (lower limit,
-                             upper limit)."),
+                             upper limit). For the 'mirror' distributions,
+                             (upper limit - X) has a gamma, log normal or log t distribution."),
                      tags$li("Elicit at least two probabilities for the treatment
                              effect Pr(delta < x | delta not 0) = p. Enter the values
                              x in the 'Treatment effect values' box, and the

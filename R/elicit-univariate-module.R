@@ -40,12 +40,15 @@ elicitUnivariateInput <- function(id, label = c("Parameter limits",
                                          'Log normal' = "lognormal",
                                          'Log Student-t' = "logt",
                                          Beta = "beta",
+                                         'Mirror gamma' = "mirrorgamma",
+                                         'Mirror log normal' = "mirrorlognormal",
+                                         'Mirror log Student-t' = "mirrorlogt",
                                          'Best fitting' = "best"),
                          selected = "normal")
       ),
       column(4,
              conditionalPanel(
-               condition = "input.dist == 't' || input.dist == 'logt'",
+               condition = "input.dist == 't' || input.dist == 'logt' || input.dist == 'mirrorlogt'",
                numericInput(ns("tdf"), label = h5("Student-t degrees of freedom"),
                             value = 3),
                ns = NS(id)

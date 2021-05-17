@@ -4,13 +4,26 @@
 \alias{sampleInterim}
 \title{Simulate posterior probabilities that the treatment is effective, given a new study}
 \usage{
-sampleInterim(fitDelta, fitPrecisionTmt, precisionCtrl = "iid",
-  fitPrecisionCtrl = NULL, sigmaSqCtrl = NULL, pDeltaZero = 0,
-  nControl = 25, nTreatment = nControl, deltaDist = "normal",
-  precisionTmtDist = "gamma", precisionCtrlDist = precisionTmtDist,
-  deltaThreshold = 0, diagnostics = FALSE, nTrials = 100,
-  nIter = 1000, nAdapt = 1000, nBurn = 0,
-  no_cores = parallel::detectCores() - 1)
+sampleInterim(
+  fitDelta,
+  fitPrecisionTmt,
+  precisionCtrl = "iid",
+  fitPrecisionCtrl = NULL,
+  sigmaSqCtrl = NULL,
+  pDeltaZero = 0,
+  nControl = 25,
+  nTreatment = nControl,
+  deltaDist = "normal",
+  precisionTmtDist = "gamma",
+  precisionCtrlDist = precisionTmtDist,
+  deltaThreshold = 0,
+  diagnostics = FALSE,
+  nTrials = 100,
+  nIter = 1000,
+  nAdapt = 1000,
+  nBurn = 0,
+  no_cores = parallel::detectCores() - 1
+)
 }
 \arguments{
 \item{fitDelta}{an object of class \code{elicitation}
