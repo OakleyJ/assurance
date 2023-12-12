@@ -1,6 +1,6 @@
 ---
 title: "README"
-output:
+output:   
   github_document:
     pandoc_args: --webtex
 ---
@@ -15,7 +15,7 @@ knitr::opts_chunk$set(
   out.width = "100%"
 )
 ```
-# assurance
+# `assurance`
 
 <!-- badges: start -->
 <!-- badges: end -->
@@ -29,13 +29,13 @@ An R package for implementing the assurance method for normally distributed data
 The `assurance` package is currently on GitHub only and requires installation of `SHELF`. Install these with the commands
 
 ``` r
-install.packages(c("devtools", "SHELF))
+install.packages(c("devtools", "SHELF"))
 devtools::install_github("OakleyJ/assurance")
 ```
 
 ## Example 
 
-This code illustrates the example from Alhussein and Oakley (2019).
+(If your browser is in dark mode, the equations won't be visible!). This code illustrates the example from Alhussein and Oakley (2019).
 
 We suppose the expert judges 
 $$Pr(\delta = 0) = 0.5,$$ and conditional on $\delta \neq 0$, the expert judges

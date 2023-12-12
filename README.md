@@ -3,7 +3,7 @@ README
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# assurance
+# `assurance`
 
 <!-- badges: start -->
 <!-- badges: end -->
@@ -24,13 +24,14 @@ The `assurance` package is currently on GitHub only and requires
 installation of `SHELF`. Install these with the commands
 
 ``` r
-install.packages(c("devtools", "SHELF))
+install.packages(c("devtools", "SHELF"))
 devtools::install_github("OakleyJ/assurance")
 ```
 
 ## Example
 
-This code illustrates the example from Alhussein and Oakley (2019).
+(If your browser is in dark mode, the equations won’t be visible!). This
+code illustrates the example from Alhussein and Oakley (2019).
 
 We suppose the expert judges
 
@@ -77,7 +78,7 @@ assurance::assuranceNormal(fitDelta = myfitDelta,
                 pDeltaZero  = 0.5,
                 nTreatment = 20,
                 nControl = 20)
-#> [1] 0.3575
+#> [1] 0.3611
 ```
 
 Next, we consider the information that might result from observing 10
@@ -110,7 +111,7 @@ which this probability is either less than 0.05, or greater than 0.95:
 
 ``` r
 mean(pEffective < 0.05 | pEffective > 0.95)
-#> [1] 0.474
+#> [1] 0.468
 ```
 
 We display the predictive distribution of posterior probabilities with a
