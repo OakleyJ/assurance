@@ -26,11 +26,10 @@ An R package for implementing the assurance method for normally distributed data
 
 ## Installation
 
-The `assurance` package is currently on GitHub only, and requires the development version of `SHELF` (also on GitHub only). Install these with the commands
+The `assurance` package is currently on GitHub only and requires installation of `SHELF`. Install these with the commands
 
 ``` r
-install.packages("devtools")
-devtools::install_github("OakleyJ/SHELF")
+install.packages(c("devtools", "SHELF))
 devtools::install_github("OakleyJ/assurance")
 ```
 
