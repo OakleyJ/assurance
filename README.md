@@ -77,7 +77,7 @@ assurance::assuranceNormal(fitDelta = myfitDelta,
                 pDeltaZero  = 0.5,
                 nTreatment = 20,
                 nControl = 20)
-#> [1] 0.3574
+#> [1] 0.3575
 ```
 
 Next, we consider the information that might result from observing 10
@@ -110,7 +110,7 @@ which this probability is either less than 0.05, or greater than 0.95:
 
 ``` r
 mean(pEffective < 0.05 | pEffective > 0.95)
-#> [1] 0.471
+#> [1] 0.474
 ```
 
 We display the predictive distribution of posterior probabilities with a

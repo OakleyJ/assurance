@@ -22,7 +22,7 @@ knitr::opts_chunk$set(
 
 An R package for implementing the assurance method for normally distributed data, with elicited distributions for the treatment effect, and the population variances in the treatment and control arms. The package implements the methodology from 
 
-- Alhussain, Z. A. and Oakley, J. E. (2019). [Assurance for clinical trial design with normally distributed outcomes: eliciting uncertainty about variances](https://arxiv.org/abs/1702.00978v2). arXiv:1702.00978v2.
+- Alhussain, ZA, Oakley, JE. Assurance for clinical trial design with normally distributed outcomes: Eliciting uncertainty about variances. Pharmaceutical Statistics. 2020; 19: 827–839. [https://doi.org/10.1002/pst.2040](https://doi.org/10.1002/pst.2040)
 
 ## Installation
 
